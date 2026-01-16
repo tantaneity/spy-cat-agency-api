@@ -60,6 +60,10 @@ api available at `http://localhost:8000`
 
 docs at `http://localhost:8000/docs`
 
+## api documentation
+
+postman collection: https://consentantaneity-8197353.postman.co/workspace/Tantan's-Workspace~1a5cf94f-15c4-49a5-83cf-6859a08a7127/request/51582497-58455d25-d7ce-451d-a4bb-8a2c80d7c6bc?action=share&creator=51582497&ctx=documentation
+
 ## endpoints
 
 ### spy cats
