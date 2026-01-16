@@ -4,8 +4,14 @@ from typing import List
 from app.database import get_db
 from app.application.dto.spy_cat_dto import SpyCatCreate, SpyCatUpdate, SpyCatResponse
 from app.application.services.spy_cat_service import SpyCatService
+from app.infrastructure.cat_api_client import CatApiClient
 
 router = APIRouter(prefix="/cats", tags=["spy-cats"])
+
+@router.get("/breeds", response_model=List[str])
+async def get_breeds():
+    client = CatApiClient()
+    return await client.get_breeds()
 
 @router.post("", response_model=SpyCatResponse, status_code=status.HTTP_201_CREATED)
 async def create_spy_cat(dto: SpyCatCreate, db: Session = Depends(get_db)):
